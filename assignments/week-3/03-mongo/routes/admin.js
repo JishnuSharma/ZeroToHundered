@@ -1,16 +1,15 @@
 const { Router } = require("express");
 const adminMiddleware = require("../middleware/admin");
 const router = Router();
-const {Admin, Course} = require("../db");
+const { Admin, Course } = require("../db");
 
 // Admin Routes
 router.post('/signup', async (req, res) => {
     // Implement admin signup logic
     let username = req.body.username;
-    let password = req.body.password; 
+    let password = req.body.password;
 
-    if(!username || !password)
-    {
+    if (!username || !password) {
         res.status(404).json({
             message: "Please enter username and password",
         });
@@ -33,9 +32,8 @@ router.post('/courses', adminMiddleware, async (req, res) => {
     let coursePrice = parseInt(req.body.price);
     let courseImageLink = req.body.imageLink;
 
-    if (!courseTitle || !courseDescription || isNaN(coursePrice) || !courseImageLink) 
-    {
-        return res.status(400).json({ error: "Input parameter missing" });
+    if (!courseTitle || !courseDescription || isNaN(coursePrice) || !courseImageLink) {
+        return res.status(400).json({ error: "Input parameters are missing" });
     }
 
     let course = await Course.create({
