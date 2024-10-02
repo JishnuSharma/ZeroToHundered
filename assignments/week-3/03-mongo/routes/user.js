@@ -58,11 +58,11 @@ router.post('/courses/:courseId', userMiddleware, async (req, res) => {
     let username = req.headers.username;
 
     try {
-        User.updateOne({
+        await User.updateOne({
             username: username,
         }, {
             "$push": {
-                purchasedCourse: courseId,
+                purchasedCourses: courseId,
             }
         });
 
