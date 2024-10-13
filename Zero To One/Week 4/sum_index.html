@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#" id="firstForm">
+        <input type="text" id="firstNumber" placeholder="Enter first number">
+        <input type="text" id="secondNumber" placeholder="Enter second number">
+        <button>Calculate</button>
+    </form>
+    <div id="answer"></div>
+</body>
+<script>
+
+
+    document.getElementById("firstForm").addEventListener("click", (e) => {
+        e.preventDefault(); l
+
+        let firstNumber = parseInt(document.getElementById("firstNumber").value);
+        let secondNumber = parseInt(document.getElementById("secondNumber").value);
+
+        let answer = firstNumber + secondNumber;
+
+        let answerContainer = document.getElementById("answer");
+        answerContainer.innerHTML = answer;
+    })
+</script>
+
+</html>
