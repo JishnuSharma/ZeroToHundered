@@ -5,14 +5,16 @@ import { useCallback, useState } from "react";
 export function Assignment1() {
     const [count, setCount] = useState(0);
 
+    // Here we dont make use of the count as dependency because if we call the function on every time count changes
+    // in that case the purpose is not solved as the child component does not depend on count but only the parent does
     // Your code starts here
     const handleIncrement = useCallback(() => {
         setCount((count) => count + 1);
-    }, [count]);
+    }, []);
 
     const handleDecrement = useCallback(() => {
         setCount((count) => count - 1);
-    }, [count]);
+    }, []);
 
     // Your code ends here
 
@@ -24,9 +26,9 @@ export function Assignment1() {
     );
 };
 
-const CounterButtons = ({ onIncrement, onDecrement }) => (
+const CounterButtons = memo(({ onIncrement, onDecrement }) => (
     <div>
         <button onClick={onIncrement}>Increment</button>
         <button onClick={onDecrement}>Decrement</button>
     </div>
-);
+));
