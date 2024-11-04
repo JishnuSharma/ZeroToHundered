@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", serif;
+    color: #424242;
+}
+
+.naviagtion
+{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    box-shadow: 0px 4px 6px -3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 100px;
+    padding: 4px;
+}
+
+.nav-content
+{
+    display: flex;
+    align-items: center;
+    width: 60%;
+    justify-content: space-between;
+}
+
+.nav-links
+{
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+    padding: 20px;
+    align-items: center;
+}
+
+.landing-image
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-content
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    padding: 70px;
+}
+
+.sub-head
+{
+    font-size: 3rem;
+    padding-bottom: 20px;
+    font-weight: 500;
+}
+
+.link
+{
+    cursor: pointer;;
+}
+
+.sub-sub-head
+{
+    font-size: 20px;
+}
+
+.sub-button
+{
+    margin-top: 30px;
+}
+
+.sub-button button
+{
+    padding: 10px 20px 10px 20px;
+    font-size: 22px;
+    border: 0;
+    background-color:#387ed1;
+    color: white;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+.sub-button button:hover
+{
+    background-color: #28282b;
+}
